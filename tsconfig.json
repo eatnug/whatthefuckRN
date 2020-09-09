@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "jsx": "react-native",
+    "lib": ["es6", "es2017"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./src/@types", "node_modules/@types"]
+  },
+  "exclude": ["./node_modules/*"]
+}
