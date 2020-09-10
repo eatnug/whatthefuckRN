@@ -7,9 +7,9 @@
  */
 
 import React from 'react';
-import Kakao from '@/assets/kakao.svg';
+import Default from '@/screens/default';
 const App = () => {
-  return <Kakao />;
+  return <Default />;
 };
 
 export default App;

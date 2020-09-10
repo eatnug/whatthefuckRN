@@ -13,6 +13,15 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'react-native/no-inline-styles': 'off'
   },
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      files: ['*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'off'
+      }
+    }
+  ],
   ignorePatterns: [
     'node_modules',
     'babel.config.js',
