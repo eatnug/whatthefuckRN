@@ -1,8 +1,9 @@
 ## 닥터필 앱
 
-- typescript
-- react native
-- redux & redux-saga
-- styled-components
-- jest & detox
-- codepush & fastlane
+- [x] typescript for language
+- [x] react native for cross platform app
+- [ ] redux & redux-saga for state management
+- [x] styled-components for css
+- [ ] jest & detox for test
+- [ ] codepush & fastlane for deployment
+- [ ] sentry for bug report
