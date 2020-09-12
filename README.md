@@ -6,4 +6,4 @@
 - [x] styled-components for css
 - [ ] jest & detox for test
 - [ ] codepush & fastlane for deployment
-- [ ] sentry for bug report
+- [x] sentry for bug report
