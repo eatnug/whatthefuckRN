@@ -11,17 +11,9 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'react-hooks/exhaustive-deps': 'off',
-    'react-native/no-inline-styles': 'off'
+    'react-native/no-inline-styles': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
   },
-  overrides: [
-    {
-      // enable the rule specifically for TypeScript files
-      files: ['*.tsx'],
-      rules: {
-        '@typescript-eslint/explicit-module-boundary-types': 'off'
-      }
-    }
-  ],
   ignorePatterns: [
     'node_modules',
     'babel.config.js',
