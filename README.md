@@ -2,8 +2,8 @@
 
 - [x] typescript for language
 - [x] react native for cross platform app
-- [ ] redux & redux-saga for state management
+- [x] redux & redux-saga for state management
 - [x] styled-components for css
-- [ ] jest & detox for test
-- [ ] codepush & fastlane for deployment
+- [x] jest for test (todo: detox)
+- [x] codepush for deployment (todo: fastlane)
 - [x] sentry for bug report

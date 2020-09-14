@@ -8,6 +8,11 @@ import { SENTRY_DSN } from '@/constants';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { configureStore } from '@/redux';
+import codePush from 'react-native-code-push';
+
+const codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME
+};
 
 const { store, persistor } = configureStore();
 
@@ -35,4 +40,4 @@ const StyledSafeAreaView = styled(SafeAreaView)`
   flex: 1;
 `;
 
-export default App;
+export default codePush(codePushOptions)(App);

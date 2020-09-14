@@ -10,6 +10,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+// codepush setting start
+import com.microsoft.codepush.react.CodePush;
+// codepush setting end
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -33,6 +36,13 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSMainModuleName() {
           return "index";
         }
+
+        // codepush setting start
+        @Override
+        protected String getJSBundleFile() {
+            return CodePush.getJSBundleFile();
+        }
+        // codepush setting end
       };
 
   @Override

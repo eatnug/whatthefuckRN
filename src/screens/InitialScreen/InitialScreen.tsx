@@ -36,6 +36,7 @@ const InitialScreen = () => {
     <Wrapper>
       <Text>Counter</Text>
       <Text>{count}</Text>
+      <Text>{count}</Text>
       <Button onPress={onPressIncrease}>
         <Text>increase</Text>
       </Button>
