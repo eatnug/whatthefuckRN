@@ -134,7 +134,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.doctorpill_app"
+        applicationId "com.pilltong.doctorpill"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
