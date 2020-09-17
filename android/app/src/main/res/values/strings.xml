@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">com.pilltong.doctorpill</string>
+    <string name="app_name">닥터필</string>
     <!-- codepush setting start -->
     <string moduleConfig="true" name="CodePushDeploymentKey">S0FGzWnORLF5bfh_1hpl-SA1VLMFlXUgKDqYq</string>
     <!-- codepush setting end -->
