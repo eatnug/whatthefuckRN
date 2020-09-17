@@ -1,4 +1,4 @@
-package com.doctorpill_app;
+package com.pilltong.doctorpill;
 
 import com.facebook.react.ReactActivity;
 
