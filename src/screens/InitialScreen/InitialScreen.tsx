@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'styled-components/native';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/redux';
+import Presenter from './Presenter';
+import { getCurrentPosition } from '@/utils/geolocation';
 import {
-  CounterState,
   decrease,
   decreaseAsync,
   increase,
@@ -12,10 +12,8 @@ import {
 
 const InitialScreen = () => {
   const dispatch = useDispatch();
-  const { count } = useSelector<RootState, CounterState>(
-    store => store.counter
-  );
-
+  const rootState = useSelector<RootState, RootState>(store => store);
+  const { count } = rootState.counter;
   const onPressIncrease = () => {
     dispatch(increase());
   };
@@ -32,32 +30,22 @@ const InitialScreen = () => {
     dispatch(decreaseAsync());
   };
 
+  const askGeolocation = async () => {
+    const location = await getCurrentPosition();
+    if (location) console.log(location);
+    else console.log('fail');
+  };
+
   return (
-    <Wrapper>
-      <Text>Counter</Text>
-      <Text>Hello!!!</Text>
-      <Text>World!!!</Text>
-      <Text>{count}</Text>
-      <Text>{count}</Text>
-      <Button onPress={onPressIncrease}>
-        <Text>increase</Text>
-      </Button>
-      <Button onPress={onPressDecrease}>
-        <Text>decrease</Text>
-      </Button>
-      <Button onPress={onPressIncreaseAsync}>
-        <Text>increaseAsync</Text>
-      </Button>
-      <Button onPress={onPressDecreaseAsync}>
-        <Text>decreaseAsync</Text>
-      </Button>
-    </Wrapper>
+    <Presenter
+      count={count}
+      onPressIncrease={onPressIncrease}
+      onPressDecrease={onPressDecrease}
+      onPressIncreaseAsync={onPressIncreaseAsync}
+      onPressDecreaseAsync={onPressDecreaseAsync}
+      askGeolocation={askGeolocation}
+    />
   );
 };
 
-const Wrapper = styled.View``;
-
-const Text = styled.Text``;
-
-const Button = styled.TouchableOpacity``;
 export default InitialScreen;
