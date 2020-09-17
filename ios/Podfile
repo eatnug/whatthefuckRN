@@ -8,6 +8,11 @@ target 'doctorpill_app' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  # react-native-permission setting start
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
+  # react-native-permission setting end
+
   target 'doctorpill_appTests' do
     inherit! :complete
     # Pods for testing
