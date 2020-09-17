@@ -44,6 +44,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "detox": "^17.5.5",
     "eslint": "^7.9.0",
+    "eslint-plugin-jest": "^24.0.1",
     "jest": "^26.4.2",
     "jest-circus": "^26.4.2",
     "jest-cli": "^26.4.2",
